@@ -1,7 +1,9 @@
+import {MapLeaflet} from "./components";
+
 function App() {
   return (
     <div>
-      APP
+      <MapLeaflet />
     </div>
   );
 }
