@@ -3,7 +3,7 @@ const apiURL = 'https://nominatim.openstreetmap.org/';
 const search = (searchValue = '') => {
   return new Promise((resolve, reject) => {
     searchValue = searchValue.replace(/\s/g, '%20');
-    fetch(`${apiURL}?q=${searchValue}&format=json`)
+    fetch(`${apiURL}?q=${searchValue}&format=json&addressdetails=1`)
       .then((response) => response.json())
       .then((data) => resolve(data))
       .catch((error) => reject(error));
